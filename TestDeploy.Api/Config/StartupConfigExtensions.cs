@@ -24,7 +24,7 @@ namespace TestDeploy.Api.Config
                     Host = dbUri.Host,
                     Port = dbUri.Port,
                     Username = userInfo[0],
-                    Passfile = userInfo[1],
+                    Password = userInfo[1],
                     Database = dbUri.LocalPath.TrimStart('/'),
                 };
 
