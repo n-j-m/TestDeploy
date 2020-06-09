@@ -38,8 +38,6 @@ namespace TestDeploy.Api
         {
             var db = services.GetRequiredService<ApplicationDbContext>();
 
-            await db.Database.EnsureDeletedAsync();
-
             await db.Database.MigrateAsync();
 
             db.Things.AddRange(new[]
