@@ -7,7 +7,7 @@ COPY . .
 
 FROM build AS publish
 WORKDIR /src/TestDeploy.Api
-RUN dotnet public -c Release -o /src/publish
+RUN dotnet publish -c Release -o /src/publish
 
 FROM mcr.microsoft.com/dotnet/core/aspnet:3.1 AS runtime
 WORKDIR /app
